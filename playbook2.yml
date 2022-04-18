@@ -1,0 +1,6 @@
+--- 
+- hosts: clients
+  tasks:
+   - name: Un-install HTTPD
+     yum: name=httpd state=absent
+     become: yes

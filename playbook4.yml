@@ -1,0 +1,9 @@
+---
+- name: HTTPD UN-INSTALL
+  hosts: clients
+  remote_user: ansible
+  become_user: root
+  become: yes
+  tasks:
+   - name: Remove HTTPD
+     yum: name=httpd state=absent

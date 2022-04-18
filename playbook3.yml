@@ -1,0 +1,11 @@
+---
+- name: HTTPD INSTALL
+  hosts: clients
+  remote_user: ansible
+  become_user: root
+  become: yes
+  tasks:
+   - name: Install Httpd
+     yum: name=httpd state=latest
+   - name: Run the Apache Server
+     service: name=httpd state=started

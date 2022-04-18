@@ -1,0 +1,8 @@
+---
+- hosts: clients
+  become: yes
+  remote_user: ansible
+  become_user: root
+  tasks:
+   - name: Create Files
+     command: /bin/touch abc xyz bahubali 

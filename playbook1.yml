@@ -1,0 +1,6 @@
+---
+- hosts: clients
+  tasks:
+   - name: Install HTTPD
+     yum: name=httpd state=latest
+     become: yes

@@ -1,0 +1,11 @@
+--- 
+- hosts: local
+  tasks:
+  - name: Launching EC2 instance
+    ec2:
+	 key_name: ansible_key
+	 instance_type: t2.micro
+	 image: ami-aa5ebdd2
+	 group: naresh1
+	 vpc_subnet_id: subnet-77a6c52f
+	 region: us-west-2
