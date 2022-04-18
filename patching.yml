@@ -9,6 +9,6 @@
    - name: set permissions
      file: dest=/tmp/ospatch_13042022.sh owner=root group=root mode=0755
    - name: execute the script
-     script: /home/ansible/ospatch_13042022.sh
+     shell: /bin/bash /tmp/ospatch_13042022.sh
    - name: reboot the host
      command: /sbin/reboot
